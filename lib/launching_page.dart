@@ -8,6 +8,15 @@ class LaunchingPage extends StatefulWidget {
 
 class _LaunchingPageState extends State<LaunchingPage> {
   @override
+  void initState() {
+    super.initState();
+    // Delay for 2 seconds before navigating to the home page
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushNamed(context, '/beranda');
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -32,7 +41,7 @@ class _LaunchingPageState extends State<LaunchingPage> {
             ),
           ],
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }
